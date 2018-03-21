@@ -1,34 +1,31 @@
 package controller;
 
+import dto.User;
+import dto.UserWithTimestamps;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import service.ServerSideService;
 
-import java.security.Timestamp;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @RestController
 public class ServerSideController {
-
-    private String username;
-    private String password;
-    private Timestamp generationTimestamp;
-    private Timestamp lastRequestTimestamp;
-    private String uuid;
-
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String helloMethod(){
-        return "Hello from the other side!";
-    }
+    @Autowired
+    ServerSideService serverSideService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public @ResponseBody ResponseEntity<?> login(@RequestBody User user){
-        return new ResponseEntity<String>("OK", HttpStatus.valueOf(200));
+        return serverSideService.login(user);
     }
 
-    private String generateUuid(){
-        return UUID.randomUUID().toString().replace("-", "");
+    @RequestMapping(value = "/performRequest", method = RequestMethod.GET)
+    public @ResponseBody ResponseEntity<?> performRequestMethod(@RequestParam String uuid){
+        return serverSideService.performRequestMethod(uuid);
     }
+
 
 }
