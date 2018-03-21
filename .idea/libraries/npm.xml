@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="npm" type="kotlin.js">
+    <CLASSES>
+      <root url="file://C:/Program Files/nodejs/node_modules/npm" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
