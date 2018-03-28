@@ -1,16 +1,11 @@
-package controller;
+package com.controller;
 
-import dto.User;
-import dto.UserWithTimestamps;
+import com.dto.User;
+import com.dto.UserWithTimestamps;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.ServerSideService;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import com.service.ServerSideService;
 
 @RestController
 public class ServerSideController {

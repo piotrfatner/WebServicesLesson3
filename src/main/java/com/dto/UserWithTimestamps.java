@@ -1,7 +1,6 @@
-package dto;
+package com.dto;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class UserWithTimestamps {
     private String username;

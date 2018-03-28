@@ -1,7 +1,7 @@
-package service;
+package com.service;
 
-import dto.User;
-import dto.UserWithTimestamps;
+import com.dto.User;
+import com.dto.UserWithTimestamps;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
