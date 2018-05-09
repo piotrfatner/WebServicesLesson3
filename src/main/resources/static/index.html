@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="clientSideController.js"></script>
+    <title>Web Services</title>
+</head>
+<body ng-controller="clientSideController">
+<div class="container">
+    <!--{{2+2}}-->
+    <div>Register:</div>
+    <form authentication-success-handler-ref="authSuccessHandler" ng-submit="register()" class="ng-cloak"
+          style="padding-bottom: 2%">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input text="text" class="form-control" id="usernameReg" name="usernameReg"
+                   ng-model="usernameReg"/>
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="passwordReg" name="passwordReg"
+                   ng-model="passwordReg"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Register!</button>
+    </form>
+    <div style="padding-bottom: 2%">{{isRegistered}}</div>
+    <div style="padding-bottom: 2%">Login:</div>
+    <form authentication-success-handler-ref="authSuccessHandler" ng-submit="login()" class="ng-cloak">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input text="text" class="form-control" id="username" name="username"
+                   ng-model="username"/>
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password"
+                   ng-model="password"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Login!</button>
+    </form>
+    <div>{{logged}}</div>
+</div>
+
+</body>
+</html>

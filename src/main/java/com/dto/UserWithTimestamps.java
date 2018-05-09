@@ -7,6 +7,7 @@ public class UserWithTimestamps {
     private String password;
     private Timestamp generationTimestamp;
     private Timestamp lastRequestTimestamp;
+    private String uuid;
 
     public UserWithTimestamps(String username, String password){
         this.username = username;
@@ -45,5 +46,13 @@ public class UserWithTimestamps {
 
     public void setLastRequestTimestamp(Timestamp lastRequestTimestamp) {
         this.lastRequestTimestamp = lastRequestTimestamp;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 }

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="npm" type="kotlin.js">
+  <library name="npm">
     <CLASSES>
       <root url="file://C:/Program Files/nodejs/node_modules/npm" />
     </CLASSES>
