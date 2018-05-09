@@ -37,7 +37,12 @@
         </div>
         <button type="submit" class="btn btn-primary">Login!</button>
     </form>
-    <div>{{logged}}</div>
+    <div style="padding-bottom: 2%">{{logged}}</div>
+    <button type="button" class="btn btn-default" ng-click="getBooks()" style="margin-bottom: 2%">Get books</button>
+    <div ng-repeat="book in books">
+        {{book.title}}
+        <button type="button" class="btn btn-default" ng-click="deleteBook(book.id)" style="margin-bottom: 2%">Delete book</button>
+    </div>
 </div>
 
 </body>

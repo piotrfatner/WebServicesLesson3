@@ -30,8 +30,12 @@ public class ServerSideController {
 
     @RequestMapping(value="/getBooks/{uuid}", method = RequestMethod.GET)
     public ResponseEntity<?> getBooks(@PathVariable("uuid") String uuid){
+        return serverSideService.getBooks(uuid);
+    }
 
-        return null;
+    @RequestMapping(value="/deleteBook/{bookId}/{uuid}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteBook(@PathVariable("bookId") long bookId,@PathVariable("uuid") String uuid){
+        return serverSideService.deleteBook(uuid,bookId);
     }
     /*@RequestMapping(value = "/greetings", method = RequestMethod.GET)
     public String greetings(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName,
